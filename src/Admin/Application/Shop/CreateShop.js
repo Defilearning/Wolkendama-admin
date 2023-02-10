@@ -55,11 +55,10 @@ function CreateShop() {
     }
 
     setIsLoading(true);
-    const apiPOST = await fetch(`http://localhost:3000/api/v1/shop`, {
+    const apiPOST = await fetch(`https://api.wolkendama.com/api/v1/shop`, {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "cors",
       method: "POST",
       credentials: "include",
       body: JSON.stringify(tempObj),

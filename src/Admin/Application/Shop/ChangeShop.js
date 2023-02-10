@@ -25,7 +25,7 @@ function ChangeShop() {
       setIsInitialLoading(true);
 
       const response = await fetch(
-        `http://localhost:3000/api/v1/shop/${id.shopId}`
+        `https://api.wolkendama.com/api/v1/shop/${id.shopId}`
       );
 
       const data = (await response.json()).data;
@@ -92,12 +92,11 @@ function ChangeShop() {
 
     setIsPosting(true);
     const apiPOST = await fetch(
-      `http://localhost:3000/api/v1/shop/${idRef.current.value}`,
+      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "cors",
         method: "PATCH",
         credentials: "include",
         body: JSON.stringify(tempObj),

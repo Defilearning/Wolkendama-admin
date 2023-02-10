@@ -16,10 +16,9 @@ const LoginPage = () => {
     };
 
     const fetchData = await fetch(
-      "http://localhost:3000/api/v1/user-admin/login",
+      "https://api.wolkendama.com/api/v1/user-admin/login",
       {
         method: "POST",
-        mode: "cors",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",

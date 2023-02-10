@@ -26,7 +26,7 @@ function UpdateInventory() {
       setIsInitialLoading(true);
 
       const shopResponse = await fetch(
-        `http://localhost:3000/api/v1/shop/${id.shopId}`
+        `https://api.wolkendama.com/api/v1/shop/${id.shopId}`
       );
 
       const shopData = (await shopResponse.json()).data;
@@ -36,7 +36,7 @@ function UpdateInventory() {
 
       if (shopData.reserveItem?.length > 0) {
         const customerResponse = await fetch(
-          `http://localhost:3000/api/v1/customer/?status=pending_payment`,
+          `https://api.wolkendama.com/api/v1/customer/?status=pending_payment`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -67,7 +67,7 @@ function UpdateInventory() {
     tempObj.authenticator = authenticator.current.value;
 
     const apiPOST = await fetch(
-      `http://localhost:3000/api/v1/shop/${idRef.current.value}/updateInventory`,
+      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}/updateInventory`,
       {
         headers: {
           "Content-Type": "application/json",

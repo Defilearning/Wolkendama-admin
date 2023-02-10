@@ -24,12 +24,11 @@ function ChangeCustomerStatus() {
       setIsInitialLoading(true);
 
       const response = await fetch(
-        `http://localhost:3000/api/v1/customer/${id.customerId}`,
+        `https://api.wolkendama.com/api/v1/customer/${id.customerId}`,
         {
           headers: {
             "Content-Type": "application/json",
           },
-          mode: "cors",
           method: "GET",
           credentials: "include",
         }
@@ -59,12 +58,11 @@ function ChangeCustomerStatus() {
     };
 
     const response = await fetch(
-      `http://localhost:3000/api/v1/customer/${id.customerId}`,
+      `https://api.wolkendama.com/api/v1/customer/${id.customerId}`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "cors",
         method: "PATCH",
         credentials: "include",
         body: JSON.stringify(tempObj),

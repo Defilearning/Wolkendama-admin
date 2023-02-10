@@ -32,9 +32,8 @@ function UploadPhoto() {
     setIsPosting(true);
 
     const apiPOST = await fetch(
-      `http://localhost:3000/api/v1/shop/${idRef.current.value}/uploadPhoto?authenticator=${authenticator.current.value}`,
+      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}/uploadPhoto?authenticator=${authenticator.current.value}`,
       {
-        mode: "cors",
         method: "PATCH",
         credentials: "include",
         body: data,

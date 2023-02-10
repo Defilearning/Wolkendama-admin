@@ -21,7 +21,7 @@ function DeletePhoto() {
       setIsInitialLoading(true);
 
       const response = await fetch(
-        `http://localhost:3000/api/v1/shop/${id.shopId}`
+        `https://api.wolkendama.com/api/v1/shop/${id.shopId}`
       );
 
       const data = (await response.json()).data;
@@ -53,12 +53,11 @@ function DeletePhoto() {
 
     setIsPosting(true);
     const apiPOST = await fetch(
-      `http://localhost:3000/api/v1/shop/${idRef.current.value}/deletePhoto`,
+      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}/deletePhoto`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "cors",
         method: "DELETE",
         body: JSON.stringify({
           img: imgToDelete,

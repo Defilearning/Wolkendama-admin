@@ -10,10 +10,9 @@ const Admin = () => {
 
   const logout = async () => {
     const fetchData = await fetch(
-      "http://localhost:3000/api/v1/user-admin/logout",
+      "https://api.wolkendama.com/api/v1/user-admin/logout",
       {
         method: "POST",
-        mode: "cors",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",

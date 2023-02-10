@@ -63,14 +63,16 @@ function CustomerOverview() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/api/v1/customer", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "cors",
-        method: "GET",
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://api.wolkendama.com/api/v1/customer",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "GET",
+          credentials: "include",
+        }
+      );
 
       const data = (await response.json()).data;
 

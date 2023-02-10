@@ -11,10 +11,9 @@ const ProtectedRoute = () => {
   useEffect(() => {
     const fetchLogInStatus = async () => {
       const fetchData = await fetch(
-        "http://localhost:3000/api/v1/user-admin/isLoggedIn",
+        "https://api.wolkendama.com/api/v1/user-admin/isLoggedIn",
         {
           method: "POST",
-          mode: "cors",
           credentials: "include",
           headers: {
             "Content-Type": "application/json",
@@ -22,10 +21,10 @@ const ProtectedRoute = () => {
           },
         }
       );
-      const { status } = await fetchData.json();
+      const response = await fetchData.json();
 
       setFirstLoad(false);
-      if (status === "success") {
+      if (response.status === "success") {
         setIsLoggedIn(true);
 
         return <Outlet />;

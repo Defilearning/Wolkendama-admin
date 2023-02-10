@@ -11,7 +11,7 @@ function ShopOverview() {
   const [toDeleteShop, setToDeleteShop] = useState();
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3000/api/v1/shop");
+    const response = await fetch("https://api.wolkendama.com/api/v1/shop");
 
     const data = (await response.json()).data;
 
@@ -22,12 +22,11 @@ function ShopOverview() {
     console.log(toDeleteShop);
 
     const apiDELETE = await fetch(
-      `http://localhost:3000/api/v1/shop/${toDeleteShop._id}`,
+      `https://api.wolkendama.com/api/v1/shop/${toDeleteShop._id}`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "cors",
         method: "DELETE",
         credentials: "include",
       }
