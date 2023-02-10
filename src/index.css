@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.file::before {
+  background-color: rgb(203, 213, 225);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+}
+
+.file::after {
+  content: "Click or drop your file here";
+  color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.file {
+  border: 2px dashed white;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  padding: 9px;
+  position: relative;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  z-index: 2;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
