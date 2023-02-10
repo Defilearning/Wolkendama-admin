@@ -13,11 +13,6 @@ import ChangeCustomerStatus from "./Admin/Application/Customer/ChangeCustomerSta
 import PrintInvoice from "./Admin/Application/Customer/PrintInvoice";
 import ProtectedRoute from "./Admin/Component/Authentication/ProtectedRoute";
 
-// const AuthLayout = ()=> (
-//   <UserAuth.Provider
-
-// )
-
 const router = createBrowserRouter([
   {
     element: <ProtectedRoute />,

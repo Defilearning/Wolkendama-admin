@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductImages from "../../../../../admin-wolkendama/src/Admin/Component/UploadPhotos/ProductImages";
+import ProductImages from "../../Component/UploadPhotos/ProductImages";
 import Alert from "../../../utils/Alert";
 
 function UploadPhoto() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ShopButtons from "../../../../../admin-wolkendama/src/Admin/Component/ShopOverview/ShopButtons";
+import ShopButtons from "../../Component/ShopOverview/ShopButtons";
 import ShopInfo from "../../Component/ShopOverview/ShopInfo";
 import Title from "../../Component/ShopOverview/Title";
 

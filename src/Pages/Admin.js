@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Customer from "../Admin/Navigation/Customer";
 import Shop from "../Admin/Navigation/Shop";
