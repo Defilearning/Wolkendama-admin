@@ -24,7 +24,7 @@ function ChangeCustomerStatus() {
       setIsInitialLoading(true);
 
       const response = await fetch(
-        `https://api.wolkendama.com/api/v1/customer/${id.customerId}`,
+        `${process.env.REACT_APP_FETCH_URL}/api/v1/customer/${id.customerId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function ChangeCustomerStatus() {
       setCustomerData(data);
     };
 
-    if (id.shopId !== "null") {
+    if (id.customerId !== "null") {
       fetchData();
     }
   }, [id]);
@@ -58,7 +58,7 @@ function ChangeCustomerStatus() {
     };
 
     const response = await fetch(
-      `https://api.wolkendama.com/api/v1/customer/${id.customerId}`,
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/customer/${id.customerId}`,
       {
         headers: {
           "Content-Type": "application/json",

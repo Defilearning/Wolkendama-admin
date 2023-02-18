@@ -11,7 +11,7 @@ const ProtectedRoute = () => {
   useEffect(() => {
     const fetchLogInStatus = async () => {
       const fetchData = await fetch(
-        "https://api.wolkendama.com/api/v1/user-admin/isLoggedIn",
+        `${process.env.REACT_APP_FETCH_URL}/api/v1/user-admin/isLoggedIn`,
         {
           method: "POST",
           credentials: "include",

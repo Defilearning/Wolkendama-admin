@@ -16,7 +16,7 @@ const LoginPage = () => {
     };
 
     const fetchData = await fetch(
-      "https://api.wolkendama.com/api/v1/user-admin/login",
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/user-admin/login`,
       {
         method: "POST",
         credentials: "include",

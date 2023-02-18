@@ -10,7 +10,7 @@ const Admin = () => {
 
   const logout = async () => {
     const fetchData = await fetch(
-      "https://api.wolkendama.com/api/v1/user-admin/logout",
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/user-admin/logout`,
       {
         method: "POST",
         credentials: "include",
@@ -30,16 +30,16 @@ const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen min-w-full flex relative">
-      <div className="h-full w-full bg-slate-800 fixed -z-10" />
-      <div className="min-w-fit w-2/12 h-screen bg-slate-600 fixed flex flex-col">
+    <div className="h-screen w-full flex relative">
+      <div className="h-screen w-screen bg-slate-800 fixed -z-10" />
+      <div className="min-w-[300px] w-2/12 h-screen bg-slate-600 flex flex-col">
         <Shop />
         <Customer />
         <button className="px-5 text-2xl" onClick={logout}>
           Logout
         </button>
       </div>
-      <div className="left-[16.6667%] w-10/12 h-screen absolute">
+      <div className="w-full ">
         <Outlet />
       </div>
     </div>

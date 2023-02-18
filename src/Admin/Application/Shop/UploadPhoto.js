@@ -32,7 +32,7 @@ function UploadPhoto() {
     setIsPosting(true);
 
     const apiPOST = await fetch(
-      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}/uploadPhoto?authenticator=${authenticator.current.value}`,
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/shop/${idRef.current.value}/uploadPhoto?authenticator=${authenticator.current.value}`,
       {
         method: "PATCH",
         credentials: "include",

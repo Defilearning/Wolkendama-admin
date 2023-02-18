@@ -55,14 +55,17 @@ function CreateShop() {
     }
 
     setIsLoading(true);
-    const apiPOST = await fetch(`https://api.wolkendama.com/api/v1/shop`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      credentials: "include",
-      body: JSON.stringify(tempObj),
-    });
+    const apiPOST = await fetch(
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/shop`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify(tempObj),
+      }
+    );
 
     const apiResponse = await apiPOST.json();
     setIsLoading(false);

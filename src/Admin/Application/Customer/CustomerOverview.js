@@ -64,7 +64,7 @@ function CustomerOverview() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://api.wolkendama.com/api/v1/customer",
+        `${process.env.REACT_APP_FETCH_URL}/api/v1/customer`,
         {
           headers: {
             "Content-Type": "application/json",

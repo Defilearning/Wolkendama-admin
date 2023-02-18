@@ -25,7 +25,7 @@ function ChangeShop() {
       setIsInitialLoading(true);
 
       const response = await fetch(
-        `https://api.wolkendama.com/api/v1/shop/${id.shopId}`
+        `${process.env.REACT_APP_FETCH_URL}/api/v1/shop/${id.shopId}`
       );
 
       const data = (await response.json()).data;
@@ -92,7 +92,7 @@ function ChangeShop() {
 
     setIsPosting(true);
     const apiPOST = await fetch(
-      `https://api.wolkendama.com/api/v1/shop/${idRef.current.value}`,
+      `${process.env.REACT_APP_FETCH_URL}/api/v1/shop/${idRef.current.value}`,
       {
         headers: {
           "Content-Type": "application/json",
