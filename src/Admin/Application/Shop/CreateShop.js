@@ -107,12 +107,12 @@ function CreateShop() {
           />
         </label>
         <label>
-          <p>Filter: valid options - single, gradient, hot, accessories</p>
+          <p>Filter: valid options - hot, new, advanced, basic, accesories</p>
           <input
             type="text"
             required={true}
             ref={filter}
-            placeholder="eg: single, gradient / gradient"
+            placeholder="eg: hot, new / hot"
             className="text-black w-full bg-slate-50"
           />
         </label>
