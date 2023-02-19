@@ -168,7 +168,7 @@ function ChangeShop() {
                   ? shopItem.itemFilter.join(",")
                   : ""
               }`}
-              placeholder="eg: single, gradient / gradient"
+              placeholder="eg: hot, new, advanced, basic, accesories"
               className="text-black w-full  bg-slate-50"
             />
           </label>

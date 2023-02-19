@@ -107,6 +107,7 @@ function UploadPhoto() {
           required
         />
       </label>
+
       <button
         className={`${
           isPosting ? "bg-slate-400" : "bg-slate-50"
@@ -116,6 +117,9 @@ function UploadPhoto() {
       >
         {isPosting ? "Processing..." : "Upload Photos!"}
       </button>
+      <p className="font-bold text-lg italic">
+        Please make sure to convert to webp before uplodaing photos!
+      </p>
 
       {response && response?.status === "success" && !isPosting && (
         <Alert variant="success">Item updated successfully</Alert>
